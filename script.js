@@ -29,7 +29,7 @@ function navbarCollapse() {
         nav.classList.toggle("collapse");
     })
 }
-//Exercice3
+//Exercice3 et 4
 function cards() {
     //First card
     let textFirstCard = document.querySelector(".card-body p");
@@ -52,7 +52,7 @@ function cards() {
     })
 }
 
-//Exercice4
+//Exercice5
 function nucleaire() {
     let nav = document.querySelector(".navbar");
     var link = document.getElementsByTagName("link")[0];
