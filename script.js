@@ -58,7 +58,12 @@ function nucleaire() {
     var link = document.getElementsByTagName("link")[0];
     console.log(link)
     nav.addEventListener("dblclick", function () {
-        link.removeAttribute("rel");
-        console.log(link);
+        if (link.hasAttribute("rel")) {
+            link.removeAttribute("rel");
+        } else {
+            link.setAttribute("rel", "stylesheet");
+        }
     })
-} 
+}
+
+//Exercice 5
