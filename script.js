@@ -7,6 +7,7 @@ function perform() {
     navbarCollapse();
     cards();
     nucleaire();
+    reduceCard();
 }
 
 
@@ -66,4 +67,26 @@ function nucleaire() {
     })
 }
 
-//Exercice 5
+//Exercice 6
+function reduceCard() {
+    let cards = document.querySelectorAll(".card");
+
+    for (let index in cards) {
+        let cardImg = cards[index].querySelector(".card-img-top");
+        let textCard = cards[index].querySelector(".card-body p");
+        let viewBtn = cards[index].querySelector(".card .btn");
+        viewBtn.addEventListener("mouseover", function () {
+
+            if (viewBtn.classList.contains("mouse-over")) {
+                textCard.style.display = "";
+                cardImg.style.width = "";
+                cardImg.style.margin = "";
+            } else {
+                textCard.style.display = "none";
+                cardImg.style.width = "20%";
+                cardImg.style.margin = "auto";
+            }
+            viewBtn.classList.toggle("mouse-over")
+        })
+    }
+}
